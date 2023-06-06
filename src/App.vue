@@ -1,36 +1,28 @@
-<script setup lang="ts">
-import Header from './components/Header.vue';
-</script>
-
 <template>
-  <Header />
+  <HeaderBar />
+  <TabPanel :tabList="tabList">
+    <template v-slot:tabPanel-1> teststst </template>
+    <template v-slot:tabPanel-2> Content 2 </template>
+    <template v-slot:tabPanel-3> Content 3 </template>
+    <template v-slot:tabPanel-4> Content 4 </template>
+
+  </TabPanel>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+<script lang="ts">
+import HeaderBar from './components/HeaderBar.vue';
+import TabPanel from './components/TabPanel.vue';
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
+export default {
+  components: {
+    HeaderBar,
+    TabPanel
+  },
+  data() {
+    return {
+      tabList: ["Flask", "Vue.js", "ASP.NET Web API", "Laravel"],
+    };
+  },
+};
+</script>
