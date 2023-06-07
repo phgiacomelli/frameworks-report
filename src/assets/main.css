@@ -3,6 +3,7 @@
 :root{
   --primary-color: #303841;
   --secondary-color: #F6C90E;
+  --secondary-dark-color: #bb9a14;
   --tertiary-color: #EEEEEE;
   --primary-light-color: #3A4750;
 }
@@ -13,4 +14,14 @@
   padding: 0;
 
   font-family: 'Roboto Mono', monospace;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: .8rem; 
 }

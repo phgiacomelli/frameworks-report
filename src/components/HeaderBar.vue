@@ -15,7 +15,7 @@
 <style scoped>
 .container {
   width: 100%;
-  padding: 1.5rem;
+  padding: 2rem;
   display: flex;
   gap: 1rem;
   align-items: end;
