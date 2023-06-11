@@ -219,6 +219,55 @@
         gerenciamento de usuário, cache e outras. Possui integração com plataformas externas (AWS,
         etc.), além de melhorar a performance por meio da execução de tarefas assíncronas.
       </div>
+
+      <div class="code-example">
+        <div class="title">Código</div>
+
+        <div class="code-img">
+          <img src="../public/img/laravel.png" alt="" />
+        </div>
+
+        <div class="tab-text">
+          <ol>
+            <li>
+              <strong>namespace:</strong> Esta instrução define o namespace no qual a classe está
+              localizada. Neste exemplo, a classe está no namespace "App\Http\Controllers".
+            </li>
+            <li>
+              <strong>use:</strong> Aqui são importadas as dependências necessárias para a classe.
+              Neste caso, estamos importando a classe <strong>User</strong> do modelo, a classe
+              <strong>Request</strong> do Laravel e a classe <strong>Validator</strong> do Laravel.
+            </li>
+            <li>
+              <strong>class UserController extends Controller:</strong> Esta é a definição da classe
+              <strong>UserController</strong>, que estende a classe base
+              <strong>Controller</strong>. A classe base <strong>Controller</strong> é fornecida
+              pelo Laravel e fornece recursos comuns para controladores.
+            </li>
+            <li>
+              <strong>public function index():</strong> Este é um método que retorna uma
+              visualização (view) contendo todos os usuários cadastrados. Ele busca todos os
+              usuários no banco de dados usando o modelo <strong>User</strong> e passa-os para a
+              visualização "users.index".
+            </li>
+            <li>
+              <strong>public function store(Request $request):</strong> Este é um método que lida
+              com a criação de um novo usuário. Ele recebe um objeto <strong>Request</strong> que
+              contém os dados enviados pelo formulário. O método faz a validação dos campos do
+              formulário usando a classe <strong>Validator</strong> do Laravel. Se a validação
+              falhar, ele redireciona de volta ao formulário com os erros e os dados de entrada
+              anteriores. Caso contrário, cria um novo objeto <strong>User</strong>, define seus
+              atributos com os valores fornecidos e salva-o no banco de dados. Em seguida,
+              redireciona para a rota "users.index" e exibe uma mensagem de sucesso.
+            </li>
+            <li>
+              Dentro do método <strong>store</strong>, usamos o método <strong>bcrypt</strong> para
+              criptografar a senha antes de salvar no banco de dados. O PHP fornece esse método, que
+              utiliza técnicas de criptografia adequadas para proteger as informações confidenciais.
+            </li>
+          </ol>
+        </div>
+      </div>
     </template>
   </TabPanel>
 </template>
