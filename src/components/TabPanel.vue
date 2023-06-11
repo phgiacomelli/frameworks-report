@@ -7,7 +7,6 @@
       <li
         v-for="(tab, i) in tabList"
         :key="i"
-        class="tabzinha"
         :class="{
           'active': i + 1 === activeTab,
           'default': i + 1 !== activeTab
@@ -36,8 +35,6 @@
 <style scoped>
 .container {
   width: 100%;
-  height: 500px;
-  background-color: var(--primary-color);
   display: flex;
   /* justify-content: center; */
   align-items: center;
@@ -70,6 +67,14 @@ li.active {
   
   border-radius: 0.6rem;
 }
+label{
+  width: 100%;
+  height: 100%;
+}
+
+label:hover{
+  cursor: pointer;
+}
 .default {
   color: var(--tertiary-color);
 }
@@ -81,9 +86,8 @@ li.active {
   margin-top: 1rem;
   background-color: var(--primary-light-color);
   width: 100%;
-  height: 100%;
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 2rem 3rem;
 }
 
 .tab-title{

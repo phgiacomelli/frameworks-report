@@ -2,7 +2,7 @@
 
 <template>
   <div class="container">
-    <div class="left">Relatório <span style="font-size: 4rem">sobre</span> Frameworks</div>
+    <div class="left">Relatório <br><span style="font-size: 4rem">sobre</span><br> Frameworks</div>
     <div class="right">
       Este trabalho explora diferentes frameworks, destacando suas funcionalidades e aplicabilidade.
       Serão analisados alguns frameworks relevantes, enfatizando seu papel no desenvolvimento de
@@ -17,9 +17,8 @@
   width: 100%;
   padding: 2rem;
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
   align-items: end;
-  background-color: var(--primary-color);
 }
 
 .left,
