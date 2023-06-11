@@ -4,10 +4,7 @@
   <div class="container">
     <div class="left">Relatório <br><span style="font-size: 4rem">sobre</span><br> Frameworks</div>
     <div class="right">
-      Este trabalho explora diferentes frameworks, destacando suas funcionalidades e aplicabilidade.
-      Serão analisados alguns frameworks relevantes, enfatizando seu papel no desenvolvimento de
-      software e na melhoria da eficiência. Serão discutidas as vantagens e boas práticas
-      relacionadas à escolha adequada de frameworks para projetos específicos.
+      {{ text }}
     </div>
   </div>
 </template>
@@ -45,10 +42,7 @@
 <script lang="ts">
 export default {
   props: {
-    name: String
+    text: String
   },
-  mounted() {
-    console.log('Header montado')
-  }
 }
 </script>

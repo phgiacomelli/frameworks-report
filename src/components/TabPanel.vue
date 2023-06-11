@@ -38,7 +38,7 @@
   display: flex;
   /* justify-content: center; */
   align-items: center;
-  padding: 5rem 2rem 2rem 2rem;
+  padding: 2rem 3rem;
   flex-direction: column;
 }
 .title{
@@ -100,7 +100,6 @@ export default {
   props: {
     tabList: {
       type: Array,
-      required: true
     },
     title: String
   },
@@ -109,8 +108,5 @@ export default {
       activeTab: 1
     }
   },
-  mounted() {
-    console.log('TabPanel montado')
-  }
 }
 </script>

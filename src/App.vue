@@ -1,6 +1,19 @@
 <template>
-  <HeaderBar />
-  <div class="text-container"></div>
+  <HeaderBar
+    :text="`Este trabalho explora diferentes frameworks, destacando suas funcionalidades e aplicabilidade.
+      Serão analisados alguns frameworks relevantes, enfatizando seu papel no desenvolvimento de
+      software e na melhoria da eficiência.`"
+  />
+  <div class="text-container">
+    &emsp;De forma simples, um framework é um “template”, que já vem de forma pronta e com diversas
+    funcionalidades, além de ferramentas que auxiliam no processo de desenvolvimento, o que acaba se
+    tornando um código limpo e facilmente adaptável. Os frameworks geralmente são utilizados para
+    resolver problemas recorrentes de uma forma mais genérica, ou seja, fazendo com que tarefas mais
+    manuais e/ou repetitivas se tornem mais simples ou até mesmo automáticas, o que faz com que o
+    foco na resolução do problema aumente. É importante também escolher o framework que se encaixa
+    melhor com a proposta do projeto. Seu uso é primordial, pois economiza tempo e reduz o risco de
+    erros, pelo fato de que muito código já vem pronto.
+  </div>
   <TabPanel :tabList="tabList" :title="`Alguns exemplos`">
     <template v-slot:tabPanel-1>
       <div class="tab-text">
@@ -199,10 +212,10 @@
               <strong>Product</strong> como parâmetro e adiciona-o à lista de produtos. Retorna um
               resultado "Created" juntamente com os detalhes do produto criado.
             </li>
+            <div class="code-img">
+              <img src="../public/img/aspnetclass.png" alt="" />
+            </div>
             <li>
-              <div class="code-img">
-                <img src="../public/img/aspnetclass.png" alt="" />
-              </div>
               <strong>public class Product { ... }:</strong> Esta é a definição da classe
               <strong>Product</strong>, que representa um produto. Ela possui propriedades como
               <strong>Id</strong>, <strong>Name</strong> e <strong>Price</strong>.
@@ -270,6 +283,7 @@
       </div>
     </template>
   </TabPanel>
+  <FooterBar />
 </template>
 
 <style scoped>
@@ -281,8 +295,9 @@
   padding: 3rem 2rem;
 }
 .tab-text ol li {
-  margin: 0.4rem 0;
+  margin: 0.8rem 0;
 }
+
 .tab-text strong {
   color: var(--secondary-color);
 }
@@ -292,8 +307,9 @@
   color: var(--secondary-color);
   padding: 1rem 0;
 }
-.p-tb {
-  padding: 2rem 0;
+.text-container {
+  padding: 3rem;
+  color: var(--tertiary-color);
 }
 </style>
 
@@ -301,11 +317,13 @@
 <script lang="ts">
 import HeaderBar from './components/HeaderBar.vue'
 import TabPanel from './components/TabPanel.vue'
+import FooterBar from './components/FooterBar.vue'
 
 export default {
   components: {
     HeaderBar,
-    TabPanel
+    TabPanel,
+    FooterBar,
   },
   data() {
     return {
