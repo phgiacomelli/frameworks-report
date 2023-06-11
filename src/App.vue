@@ -18,7 +18,7 @@
         <div class="code-img">
           <img src="../public/img/flask.png" alt="" />
         </div>
-        
+
         <div class="tab-text">
           <ol>
             <li>
@@ -67,10 +67,10 @@
             <li>
               <strong>app.run(debug=True):</strong> Esta linha inicia o servidor de desenvolvimento
               do Flask. Quando o arquivo é executado, o servidor é iniciado e o aplicativo começa a
-              ouvir as requisições. O parâmetro <strong>debug=True</strong> ativa o modo de depuração, o que é útil
-              durante o desenvolvimento, pois exibe mensagens detalhadas de erro, recarrega
-              automaticamente o aplicativo quando o código é modificado, entre outras
-              funcionalidades úteis.
+              ouvir as requisições. O parâmetro <strong>debug=True</strong> ativa o modo de
+              depuração, o que é útil durante o desenvolvimento, pois exibe mensagens detalhadas de
+              erro, recarrega automaticamente o aplicativo quando o código é modificado, entre
+              outras funcionalidades úteis.
             </li>
           </ol>
         </div>
@@ -86,6 +86,63 @@
         documentação oficial e versatilidade. Para aplicações de baixa escala, se torna a solução
         perfeita.
       </div>
+
+      <div class="code-example">
+        <div class="title">Código</div>
+
+        <div class="code-img">
+          <img src="../public/img/vue.png" alt="" />
+        </div>
+
+        <div class="tab-text">
+          <ol>
+            <li>
+              <strong>&lt;template&gt;:</strong> Esta é a seção onde você define a estrutura do seu
+              componente usando a sintaxe do Vue.js. No exemplo, temos uma <strong>div</strong> que
+              contém um cabeçalho <strong>&lt;h1&gt;</strong> e um botão
+              <strong>&lt;button&gt;</strong>.
+            </li>
+            <li>
+              <strong v-text="'{{ message }}:'"></strong> Aqui, usamos a sintaxe de interpolação do
+              Vue.js para exibir o valor da variável <strong>message</strong>. O conteúdo dessa
+              variável será exibido dentro do cabeçalho &lt;h1&gt;.
+            </li>
+            <li>
+              <strong>&lt;button @click="changeMessage"&gt;Alterar Mensagem&lt;/button&gt;:</strong>
+              Este é um botão que, quando clicado, chama o método <strong>changeMessage</strong>. O
+              <strong>@click</strong> é uma diretiva do Vue.js que escuta o evento de clique e
+              associa-o a um método específico.
+            </li>
+            <li>
+              <strong>&lt;style scoped&gt;:</strong> A tag é usada para definir estilos CSS dentro
+              de um componente Vue.js. O atributo <strong>scoped</strong> indica que os estilos
+              definidos nesta tag se aplicam apenas ao componente atual e não afetam outros
+              componentes.
+            </li>
+            <li>
+              <strong>&lt;script&gt;:</strong> Esta seção contém a lógica do componente. Nele, você
+              pode definir dados, métodos e outras configurações.
+            </li>
+            <li>
+              <strong>export default { ... }:</strong> Aqui, exportamos o objeto Vue que representa
+              o componente. O objeto contém várias propriedades, como <strong>data</strong>,
+              <strong>methods</strong> e outras, que ajudam a definir o comportamento do componente.
+            </li>
+            <li>
+              <strong>data() { ... }:</strong> Esta é uma função dentro do objeto Vue que retorna um
+              objeto. Neste exemplo, a função <strong>data()</strong> retorna um objeto com uma
+              única propriedade chamada <strong>message</strong>, que inicialmente contém o valor
+              "Olá, mundo!".
+            </li>
+            <li>
+              <strong>methods: { ... }:</strong> Nesta seção, definimos os métodos que podem ser
+              usados dentro do componente. No exemplo, temos um método chamado
+              <strong>changeMessage()</strong>, que é chamado quando o botão é clicado. Esse método
+              atualiza o valor da propriedade <strong>message</strong> para "Nova mensagem!".
+            </li>
+          </ol>
+        </div>
+      </div>
     </template>
 
     <template v-slot:tabPanel-3>
@@ -93,6 +150,65 @@
         &emsp; É um framework <strong>C#</strong>, utilizado para construir serviços HTTP, que
         possibilita diversos dispositivos (browsers e dispositivos móveis) acessá-lo e/ou consumi-lo
         diretamente.
+      </div>
+
+      <div class="code-example">
+        <div class="title">Código</div>
+
+        <div class="code-img">
+          <img src="../public/img/aspnetcontroller.png" alt="" />
+        </div>
+
+        <div class="tab-text">
+          <ol>
+            <li>
+              <strong>using:</strong> Esta instrução define os namespaces que serão usados no
+              código. Neste exemplo, são importados alguns namespaces comuns do ASP.NET Web API.
+            </li>
+            <li>
+              <strong>namespace:</strong> É o escopo onde as classes do código estão definidas.
+              Neste caso, o código está definido no namespace "WebApiExample.Controllers".
+            </li>
+            <li>
+              <strong>public class ProductsController : ApiController:</strong> Esta é a declaração
+              de classe para o controlador de API. A classe herda da classe
+              <strong>ApiController,</strong> que é uma classe base fornecida pelo ASP.NET Web API.
+            </li>
+            <li>
+              <strong
+                >private static List&lt;Product&gt; products = new List&lt;Product&gt;() { ...
+                };:</strong
+              >
+              Aqui, definimos uma lista estática de objetos <strong>Product</strong>. Essa lista é
+              usada como uma fonte de dados fictícia neste exemplo.
+            </li>
+            <li>
+              <strong>public IEnumerable&lt;Product&gt; Get():</strong> Este é um método HTTP GET
+              para obter todos os produtos. Ele retorna a lista de produtos como um objeto
+              <strong>IEnumerable&lt;Product&gt;</strong>.
+            </li>
+            <li>
+              <strong>public IHttpActionResult Get(int id):</strong> Este é um método HTTP GET para
+              obter um produto específico pelo seu ID. Ele recebe o ID como parâmetro e retorna o
+              produto correspondente se encontrado, ou retorna um resultado "NotFound" se o produto
+              não existir.
+            </li>
+            <li>
+              <strong>public IHttpActionResult Post(Product product):</strong> Este é um método HTTP
+              POST para adicionar um novo produto. Ele recebe um objeto
+              <strong>Product</strong> como parâmetro e adiciona-o à lista de produtos. Retorna um
+              resultado "Created" juntamente com os detalhes do produto criado.
+            </li>
+            <li>
+              <div class="code-img">
+                <img src="../public/img/aspnetclass.png" alt="" />
+              </div>
+              <strong>public class Product { ... }:</strong> Esta é a definição da classe
+              <strong>Product</strong>, que representa um produto. Ela possui propriedades como
+              <strong>Id</strong>, <strong>Name</strong> e <strong>Price</strong>.
+            </li>
+          </ol>
+        </div>
       </div>
     </template>
 
@@ -112,11 +228,11 @@
   font-size: 1rem;
   color: var(--tertiary-color);
 }
-.tab-text ol{
+.tab-text ol {
   padding: 3rem 2rem;
 }
-.tab-text ol li{
-  margin: .4rem 0
+.tab-text ol li {
+  margin: 0.4rem 0;
 }
 .tab-text strong {
   color: var(--secondary-color);
