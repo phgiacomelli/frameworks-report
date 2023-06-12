@@ -8,8 +8,8 @@
         v-for="(tab, i) in tabList"
         :key="i"
         :class="{
-          'active': i + 1 === activeTab,
-          'default': i + 1 !== activeTab
+          active: i + 1 === activeTab,
+          default: i + 1 !== activeTab
         }"
       >
         <label :for="`${i}`" v-text="tab" />
@@ -38,10 +38,9 @@
   display: flex;
   /* justify-content: center; */
   align-items: center;
-  padding: 2rem 3rem;
   flex-direction: column;
 }
-.title{
+.title {
   font-size: 2rem;
   font-weight: 500;
   color: var(--secondary-color);
@@ -64,15 +63,15 @@ li.active {
   color: var(--primary-color);
   font-weight: bold;
   background-color: var(--secondary-color);
-  
+
   border-radius: 0.6rem;
 }
-label{
+label {
   width: 100%;
   height: 100%;
 }
 
-label:hover{
+label:hover {
   cursor: pointer;
 }
 .default {
@@ -90,8 +89,27 @@ label:hover{
   padding: 2rem 3rem;
 }
 
-.tab-title{
+.tab-title {
   color: red;
+}
+@media only screen and (max-width: 424px) {
+  .title{
+    text-align: center;
+  }
+  .tab-list {
+    flex-direction: column;
+    padding: .8rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .tab-list {
+    gap: 0;
+  }
+
+  .panel-content{
+    padding: 1.2rem;
+  }
 }
 </style>
 
@@ -99,7 +117,7 @@ label:hover{
 export default {
   props: {
     tabList: {
-      type: Array,
+      type: Array
     },
     title: String
   },
@@ -107,6 +125,6 @@ export default {
     return {
       activeTab: 1
     }
-  },
+  }
 }
 </script>

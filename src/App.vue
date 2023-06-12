@@ -1,5 +1,6 @@
 <template>
-  <HeaderBar
+  <div class="main-container">
+    <HeaderBar
     :text="`Este trabalho explora diferentes frameworks, destacando suas funcionalidades e aplicabilidade.
       Serão analisados alguns frameworks relevantes, enfatizando seu papel no desenvolvimento de
       software e na melhoria da eficiência.`"
@@ -29,7 +30,7 @@
         <div class="title">Código</div>
 
         <div class="code-img">
-          <img src="../public/img/flask.png" alt="" />
+          <img src="../img/flask.png" alt="" />
         </div>
 
         <div class="tab-text">
@@ -104,7 +105,7 @@
         <div class="title">Código</div>
 
         <div class="code-img">
-          <img src="../public/img/vue.png" alt="" />
+          <img src="../img/vue.png" alt="" />
         </div>
 
         <div class="tab-text">
@@ -169,7 +170,7 @@
         <div class="title">Código</div>
 
         <div class="code-img">
-          <img src="../public/img/aspnetcontroller.png" alt="" />
+          <img src="../img/aspnetcontroller.png" alt="" />
         </div>
 
         <div class="tab-text">
@@ -213,7 +214,7 @@
               resultado "Created" juntamente com os detalhes do produto criado.
             </li>
             <div class="code-img">
-              <img src="../public/img/aspnetclass.png" alt="" />
+              <img src="../img/aspnetclass.png" alt="" />
             </div>
             <li>
               <strong>public class Product { ... }:</strong> Esta é a definição da classe
@@ -237,7 +238,7 @@
         <div class="title">Código</div>
 
         <div class="code-img">
-          <img src="../public/img/laravel.png" alt="" />
+          <img src="../img/laravel.png" alt="" />
         </div>
 
         <div class="tab-text">
@@ -283,13 +284,19 @@
       </div>
     </template>
   </TabPanel>
-  <FooterBar />
+</div>
+<FooterBar />
+  
 </template>
 
 <style scoped>
+.main-container{
+  padding: 0 10rem;
+}
 .tab-text {
   font-size: 1rem;
   color: var(--tertiary-color);
+  text-align: justify;
 }
 .tab-text ol {
   padding: 3rem 2rem;
@@ -299,7 +306,9 @@
 }
 
 .tab-text strong {
+  word-wrap: break-word;
   color: var(--secondary-color);
+  
 }
 .title {
   font-size: 2rem;
@@ -308,8 +317,32 @@
   padding: 1rem 0;
 }
 .text-container {
-  padding: 3rem;
   color: var(--tertiary-color);
+  margin: 5rem 0 3rem 0;
+  text-align: justify;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .main-container{
+    padding: 0 2rem;
+    font-size: .9rem;
+  }
+
+  .tab-text, .text-container{
+    font-size: .9rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1440px) {
+  .main-container{
+    padding: 0 5rem;
+    
+  }
 }
 </style>
 
